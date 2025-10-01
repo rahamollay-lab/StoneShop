@@ -166,28 +166,28 @@
         </div>
     </div>
 
-    <script>
-        function showCategory(category) {
-            // مخفی کردن همه بخش‌ها
-            document.querySelectorAll('.category-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // غیرفعال کردن همه دکمه‌ها
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // نمایش بخش انتخاب شده
-            document.getElementById(category).classList.add('active');
-            
-            // فعال کردن دکمه انتخاب شده
-            event.target.classList.add('active');
-        }
-    </script>
+   <script>
+    function showCategory(category, event) {
+        // مخفی کردن همه بخش‌ها
+        document.querySelectorAll('.category-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // غیرفعال کردن همه دکمه‌ها
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // نمایش بخش انتخاب شده
+        document.getElementById(category).classList.add('active');
+        
+        // فعال کردن دکمه انتخاب شده
+        event.target.classList.add('active');
+    }
+</script>
 
 
- <script src="../js/script.js"></script>
+ <script src="/js/script.js"></script>
     
 </body>
 </html>
