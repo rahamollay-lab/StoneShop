@@ -371,7 +371,6 @@ background: #3498db;
 <body>
     <header-component></header-component>
 
-    <!-- هدر صفحه -->
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">گرانیت نطنز</h1>
@@ -425,7 +424,7 @@ background: #3498db;
                 
                 <!-- دکمه‌های اقدام -->
                 <div class="action-buttons">
-                    <button class="order-btn">
+                    <button class="order-btn" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         سفارش محصول
                     </button>
@@ -505,7 +504,7 @@ display: flex;
                     align-items: center;
                     justify-content: center;
                     z-index: 10000;
-                ;
+                ;`
                 
                 modal.innerHTML = 
                     <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 500px; width: 90%;">
@@ -540,7 +539,7 @@ display: flex;
                 } else {
                     // Fallback modal
                     const modal = document.createElement('div');
-                    modal.style.cssText = 
+                    modal.style.cssText = `
                         position: fixed;
                         top: 0;
                         left: 0;
@@ -551,7 +550,7 @@ display: flex;
                         align-items: center;
                         justify-content: center;
                         z-index: 10000;
-                    ;
+                    ;`
                     
                     modal.innerHTML = 
                         <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%;">
@@ -567,7 +566,7 @@ display: flex;
                                 </button>
                             </div>
                         </div>
-                    `;
+                    ;
                     
                     document.body.appendChild(modal);
                 }

@@ -8,7 +8,7 @@
     <script src="/html/header-component.js"></script>
     
     <style>
-        /* استایل‌های اصلی */
+
         * {
             margin: 0;
             padding: 0;
@@ -221,7 +221,7 @@ color: #2c3e50;
         .product-card {
             animation: fadeInUp 0.6s ease;
         }
-        }
+        
         
         .product-category {
             color: #7f8c8d;
@@ -378,7 +378,7 @@ color: #2c3e50;
 <body>
     <header-component></header-component>
 
-    <!-- هدر صفحه -->
+
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">تراورتن عباس آباد</h1>
@@ -429,7 +429,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد سفید سوپر" data-price="3500000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد سفید سوپر" data-price="3500000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -465,7 +465,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد سفید ممتاز" data-price="3000000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد سفید ممتاز" data-price="3000000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -501,7 +501,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سوپر" data-price="2800000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سوپر" data-price="2800000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -536,7 +536,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم ممتاز" data-price="2200000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم ممتاز" data-price="2200000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -572,7 +572,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سفید سوپر" data-price="3000000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سفید سوپر" data-price="3000000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -705,7 +705,7 @@ this.classList.add('active');
                     
                     // نمایش مودال سفارش
                     const modal = document.createElement('div');
-                    modal.style.cssText = 
+                    modal.style.cssText = `
                         position: fixed;
                         top: 0;
                         left: 0;
@@ -716,7 +716,7 @@ this.classList.add('active');
                         align-items: center;
                         justify-content: center;
                         z-index: 10000;
-                    ;
+                    ;`
                     
                     modal.innerHTML = 
                         <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%;">

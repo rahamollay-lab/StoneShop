@@ -341,7 +341,7 @@ class HeaderComponent extends HTMLElement {
                                 <span>💎</span>
                                 مشاوره رایگان
                             </button>
-                            <button class="action-btn cart-btn">
+                            <button class="action-btn cart-btn" href="cartItem.html">
                                 <span class="cart-count">0</span>
                                 🛒 سبد خرید
                             </button>
