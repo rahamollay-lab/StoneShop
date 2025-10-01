@@ -1,4 +1,4 @@
-function showCategory(category) {
+function showCategory(category, element) {
     // مخفی کردن همه بخش‌ها
     document.querySelectorAll('.category-section').forEach(section => {
         section.classList.remove('active');
@@ -13,7 +13,7 @@ function showCategory(category) {
     document.getElementById(category).classList.add('active');
 
     // فعال کردن دکمه انتخاب شده
-    event.target.classList.add('active');
+    element.classList.add('active');
 
     // مدیریت فیلتر رنگ
     const colorOptions = document.querySelectorAll('.color-option');
@@ -28,37 +28,39 @@ function showCategory(category) {
     const priceRange = document.getElementById('priceRange');
     const selectedPrice = document.getElementById('selectedPrice');
 
-    // فرمت کردن اعداد به صورت فارسی
-    function formatPrice(price) {
-        return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+    if (priceRange && selectedPrice) {
+        // فرمت کردن اعداد به صورت فارسی
+        function formatPrice(price) {
+            return new Intl.NumberFormat('fa-IR').format(price) + ' تومان';
+        }
+
+        priceRange.addEventListener('input', function () {
+            selectedPrice.textContent = formatPrice(this.value);
+        });
+
+        // مقدار اولیه
+        selectedPrice.textContent = formatPrice(priceRange.value);
     }
-
-    priceRange.addEventListener('input', function () {
-        selectedPrice.textContent = formatPrice(this.value);
-    });
-
-    // مقدار اولیه
-    selectedPrice.textContent = formatPrice(priceRange.value);
-
-    // اطمینان از نمایش صحیح دسته اول
-    switchCategory('travertine');
-};
+}
 
 // فیلتر بر اساس محدوده قیمت
 function filterByPrice(minPrice, maxPrice) {
     document.querySelectorAll('.stone-item').forEach(item => {
         const priceText = item.querySelector('.price-range').textContent;
         const prices = priceText.match(/\d+/g);
-        const itemMinPrice = parseInt(prices[0].replace(/,/g, ''));
-        const itemMaxPrice = parseInt(prices[1].replace(/,/g, ''));
-        
-        if (itemMinPrice >= minPrice && itemMaxPrice <= maxPrice) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
+        if (prices && prices.length >= 2) {
+            const itemMinPrice = parseInt(prices[0].replace(/,/g, ''));
+            const itemMaxPrice = parseInt(prices[1].replace(/,/g, ''));
+            
+            if (itemMinPrice >= minPrice && itemMaxPrice <= maxPrice) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
         }
     });
 }
+
 // جستجو در نام محصولات
 function searchStones(query) {
     document.querySelectorAll('.stone-item').forEach(item => {
@@ -70,6 +72,7 @@ function searchStones(query) {
         }
     });
 }
+
 let compareList = [];
 
 function addToCompare(stoneName) {
@@ -78,6 +81,16 @@ function addToCompare(stoneName) {
         updateCompareBadge();
         showNotification(`سنگ ${stoneName} به لیست مقایسه اضافه شد`);
     }
+}
+
+function updateCompareBadge() {
+    // پیاده‌سازی آپدیت نشان مقایسه
+    console.log('لیست مقایسه آپدیت شد:', compareList);
+}
+
+function showNotification(message) {
+    // پیاده‌سازی نمایش نوتیفیکیشن
+    console.log('نوتیفیکیشن:', message);
 }
 
 function showCompareModal() {
@@ -97,6 +110,14 @@ function showCompareModal() {
         document.body.appendChild(modal);
     }
 }
+
+function closeCompareModal() {
+    const modal = document.querySelector('.compare-modal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
 // تابع نمایش مشاوره
 function showConsultation() {
     const modal = document.createElement('div');
@@ -373,21 +394,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-  function showCategory(category) {
-            // مخفی کردن همه بخش‌ها
-            document.querySelectorAll('.category-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // غیرفعال کردن همه دکمه‌ها
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // نمایش بخش انتخاب شده
-            document.getElementById(category).classList.add('active');
-            
-            // فعال کردن دکمه انتخاب شده
-            Event.target.classList.add('active');
-        }
