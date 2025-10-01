@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گرانیت نهبندان | سنگ نصف جهان</title>
+    
+    <script src="/html/header-component.js"></script>
+    
+    <style>
+        /* استایل‌های اصلی */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* هدر صفحه */
+        .page-hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #e67e22;
+        }
+        
+        .page-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* محتوای اصلی */
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+            align-items: start;
+        }
+        
+        .product-image {
+            background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+            height: 500px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .product-details {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-name {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .product-description {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        /* قیمت‌ها */
+        .pricing-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .pricing-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .price-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .price-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .price-type {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .price-amount {
+            font-size: 2rem;
+            color: #e67e22;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .price-unit {
+            font-size: 1rem;
+            color: #95a5a6;
+}
+        
+        /* ویژگی‌ها */
+        .features-section {
+            margin: 30px 0;
+        }
+        
+        .features-title {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .features-list {
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            color: #555;
+            position: relative;
+            padding-right: 35px;
+            border-bottom: 1px dashed #ecf0f1;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* مشخصات فنی */
+        .specs-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .specs-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .spec-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .spec-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .spec-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #e67e22;
+        }
+        
+        .spec-name {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .spec-value {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+        
+        /* دکمه‌های اقدام */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .order-btn {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .order-btn:hover {
+            background: linear-gradient(135deg, #d35400, #e67e22);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+        
+        .consultation-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .consultation-btn:hover {
+            background: #2980b9;
+            transform: scale(1.05);
+        }
+        
+        /* رسپانسیو */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.2rem;
+            }
+            
+            .product-content {
+grid-template-columns: 1fr;
+            }
+            
+            .product-image {
+                height: 300px;
+            }
+            
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header-component></header-component>
+
+    <!-- هدر صفحه -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">گرانیت نهبندان</h1>
+            <p class="page-subtitle">سنگ دانه فلفلی با کیفیت عالی و قیمت مناسب</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- محتوای اصلی -->
+        <div class="product-content">
+            <div class="product-image">
+                تصویر گرانیت نهبندان - دانه فلفلی
+            </div>
+            
+            <div class="product-details">
+                <h2 class="product-name">گرانیت نهبندان - دانه فلفلی</h2>
+                <p class="product-description">
+                    گرانیت نهبندان با طرح دانه فلفلی منحصر بفرد و رنگ خاکستری طبیعی، یکی از محبوب‌ترین سنگ‌های گرانیتی در بازار است. این سنگ با مقاومت بسیار بالا و جذب آب ناچیز، انتخابی ایده‌آل برای کف‌پوش‌های پرتردد، نما و فضاهای صنعتی می‌باشد.
+                </p>
+                
+                <!-- قیمت‌ها -->
+                <div class="pricing-section">
+                    <h3 class="pricing-title">قیمت‌ها</h3>
+                    <div class="price-grid">
+                        <div class="price-item">
+                            <div class="price-type">پلاک</div>
+                            <div class="price-amount">۱,۱۰۰,۰۰۰</div>
+                            <div class="price-unit">تومان</div>
+                        </div>
+                        <div class="price-item">
+                            <div class="price-type">فرشی</div>
+                            <div class="price-amount">۶۰۰,۰۰۰</div>
+                            <div class="price-unit">تومان</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ویژگی‌ها -->
+                <div class="features-section">
+                    <h3 class="features-title">ویژگی‌های منحصر بفرد</h3>
+                    <ul class="features-list">
+                        <li>طرح دانه فلفلی طبیعی و زیبا</li>
+                        <li>رنگ خاکستری یکدست و مدرن</li>
+                        <li>مقاومت بسیار بالا در برابر سایش و ضربه</li>
+                        <li>جذب آب نزدیک به صفر</li>
+                        <li>مناسب برای فضاهای پرتردد و صنعتی</li>
+                        <li>قابلیت صیقل‌پذیری عالی</li>
+                    </ul>
+                </div>
+                
+                <!-- دکمه‌های اقدام -->
+                <div class="action-buttons">
+                    <button class="order-btn">
+                        <span>🛒</span>
+                        سفارش محصول
+                    </button>
+                    <button class="consultation-btn">
+                        <span>💎</span>
+                        مشاوره رایگان
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- مشخصات فنی -->
+        <div class="specs-section">
+            <h3 class="specs-title">مشخصات فنی گرانیت نهبندان</h3>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <div class="spec-icon">💧</div>
+                    <h4 class="spec-name">جذب آب</h4>
+                    <p class="spec-value">کمتر از ۰.۳٪</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">⚡</div>
+<h4 class="spec-name">مقاومت فشاری</h4>
+                    <p class="spec-value">۱۸۰ مگاپاسکال</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">📏</div>
+                    <h4 class="spec-name">ضخامت استاندارد</h4>
+                    <p class="spec-value">۲-۳ سانتیمتر</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🎯</div>
+                    <h4 class="spec-name">کاربرد اصلی</h4>
+                    <p class="spec-value">کف پرتردد، نما، صنعتی</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🌈</div>
+                    <h4 class="spec-name">رنگ</h4>
+                    <p class="spec-value">خاکستری دانه فلفلی</p>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-icon">🏭</div>
+                    <h4 class="spec-name">منطقه استخراج</h4>
+                    <p class="spec-value">نهبندان، خراسان جنوبی</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // مدیریت دکمه‌ها
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderBtn = document.querySelector('.order-btn');
+            const consultationBtn = document.querySelector('.consultation-btn');
+            
+            orderBtn.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.cssText = 
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10000;
+                ;
+                
+                modal.innerHTML = 
+                    <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%;">
+                        <h3 style="color: #2c3e50; margin-bottom: 15px; font-size: 1.5rem;">سفارش گرانیت نهبندان</h3>
+                        <p style="margin-bottom: 10px; color: #666; font-size: 1.1rem;">گرانیت نهبندان - دانه فلفلی</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0;">
+                            <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                                <div style="font-size: 0.9rem; color: #7f8c8d;">پلاک</div>
+                                <div style="font-size: 1.3rem; color: #e67e22; font-weight: bold;">۱,۱۰۰,۰۰۰ تومان</div>
+                            </div>
+                            <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                                <div style="font-size: 0.9rem; color: #7f8c8d;">فرشی</div>
+                                <div style="font-size: 1.3rem; color: #e67e22; font-weight: bold;">۶۰۰,۰۰۰ تومان</div>
+                            </div>
+                        </div>
+                        <p style="color: #27ae60; margin-bottom: 20px; font-size: 1rem;">
+                            ✅ سفارش شما ثبت شد. کارشناسان ما به زودی با شما تماس خواهند گرفت.
+                        </p>
+                        <button onclick="this.closest('div').parentElement.remove()" style="background: #e67e22; color: white; border: none; padding: 12px 35px; border-radius: 25px; cursor: pointer; font-size: 1rem; font-weight: 500;">
+                            متوجه شدم
+                        </button>
+                    </div>
+                ;
+document.body.appendChild(modal);
+            });
+            
+            consultationBtn.addEventListener('click', function() {
+                const headerComponent = document.querySelector('header-component');
+                if (headerComponent && headerComponent.showConsultationModal) {
+                    headerComponent.showConsultationModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
