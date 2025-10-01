@@ -36,10 +36,10 @@
    
 </div>
     <div class="container">
-   <div class="category-filters">
-    <button class="category-btn active" onclick="showCategory('travertine', this)"> تراورتن</button>
-    <button class="category-btn" onclick="showCategory('granite', this)">گرانیت</button>
-    <button class="category-btn" onclick="showCategory('marble', this)">مرمریت</button>
+ <div class="category-filters">
+    <button class="category-btn active" onclick="showCategory('travertine', event)">تراورتن</button>
+    <button class="category-btn" onclick="showCategory('granite', event)">گرانیت</button>
+    <button class="category-btn" onclick="showCategory('marble', event)">مرمریت</button>
 </div>
 </div>
         
@@ -167,25 +167,27 @@
         </div>
     </div>
 
-  <script>
-    function showCategory(category) {
-        // مخفی کردن همه بخش‌ها
-        document.querySelectorAll('.category-section').forEach(section => {
-            section.classList.remove('active');
-        });
-        
-        // غیرفعال کردن همه دکمه‌ها
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // نمایش بخش انتخاب شده
-        document.getElementById(category).classList.add('active');
-        
-        // فعال کردن دکمه انتخاب شده
-        event.target.classList.add('active');
-    }
-    </script>
+ <script>
+function showCategory(category, clickEvent) {
+    console.log("دسته انتخاب شده:", category);
+    
+    // مخفی کردن همه بخش‌ها
+    document.querySelectorAll('.category-section').forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // غیرفعال کردن همه دکمه‌ها
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // نمایش بخش انتخاب شده
+    document.getElementById(category).classList.add('active');
+    
+    // فعال کردن دکمه انتخاب شده
+    clickEvent.target.classList.add('active');
+}
+</script>
 
     <!-- فایل‌های JS -->
     <script src="header-component.js"></script>
