@@ -328,7 +328,7 @@ class HeaderComponent extends HTMLElement {
                             </li>
                             
                             <li>
-                                <a href="contact.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <span class="nav-icon">📞</span>
                                     ارتباط با ما
                                 </a>
