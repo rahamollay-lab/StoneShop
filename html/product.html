@@ -16,27 +16,13 @@
         </div>
     </section>
 
-    <div class="advanced-filters">
-        <div class="search-box">
-            <input type="text" id="stoneSearch" placeholder="جستجوی نام سنگ...">
-        </div>
-        
-        <div class="price-filter">
-            <label>محدوده قیمت:</label>
-            <input type="number" id="minPrice" placeholder="حداقل قیمت">
-            <input type="number" id="maxPrice" placeholder="حداکثر قیمت">
-            <button>اعمال فیلتر</button>
-        </div>
-    </div>
-
     <div class="container">
         <div class="category-filters">
-            <button class="category-btn active" onclick="showCategory('travertine')">تراورتن</button>
-            <button class="category-btn" onclick="showCategory('granite')">گرانیت</button>
-            <button class="category-btn" onclick="showCategory('marble')">مرمریت</button>
+            <button class="category-btn active" onclick="switchToCategory('travertine')">تراورتن</button>
+            <button class="category-btn" onclick="switchToCategory('granite')">گرانیت</button>
+            <button class="category-btn" onclick="switchToCategory('marble')">مرمریت</button>
         </div>
         
-        <!-- محتوای دسته‌ها -->
         <div id="travertine" class="category-section active">
             <h2 class="category-title">سنگ تراورتن</h2>
             <div class="stone-list">
@@ -44,138 +30,44 @@
                     <div class="stone-name"><a href="travertine/abas.html">عباس اباد</a></div>
                     <div class="price-range">قیمت: ۸۰۰,۰۰۰ - ۱,۲۰۰,۰۰۰ تومان</div>
                 </div>
-              <div class="stone-item">
-                    <div class="stone-name"> <a href="travertine/bokhar.html"> دره بخاری</a></div>
-                    <div class="price-range">قیمت: ۷۰۰,۰۰۰ - ۱,۱۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #7f8c8d;"></div>
-                        <div class="color-icon" style="background-color: #95a5a6;"></div>
-                        <div class="color-icon" style="background-color: #636e72;"></div>
-                    </div>
-                </div>
-                
-                <div class="stone-item">
-                    <div class="stone-name"><a href="travertine/hajy.html">حاجی آباد</a></div>
-                    <div class="price-range">قیمت: ۹۰۰,۰۰۰ - ۱,۴۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #e74c3c;"></div>
-                        <div class="color-icon" style="background-color: #c0392b;"></div>
-                        <div class="color-icon" style="background-color: #d35400;"></div>
-                    </div>
-                </div>
-                
-                <div class="stone-item">
-                    <div class="stone-name"><a href="travertine/kashan.html">کاشان</a></div>
-                    <div class="price-range">قیمت: ۶۵۰,۰۰۰ - ۱,۰۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #f1c40f;"></div>
-                        <div class="color-icon" style="background-color: #f39c12;"></div>
-                        <div class="color-icon" style="background-color: #e67e22;"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="price-info">
-                <h4>طیف قیمت تراورتن: از ۶۵۰,۰۰۰ تومان (کاشان) تا ۱,۴۰۰,۰۰۰ تومان (حاجی آباد)</h4>
             </div>
         </div>
-        
-        <!-- دسته گرانیت -->
+
         <div id="granite" class="category-section">
             <h2 class="category-title">سنگ گرانیت</h2>
-            
             <div class="stone-list">
                 <div class="stone-item">
                     <div class="stone-name"><a href="granite/nehbandan.html">نهبندان</a></div>
                     <div class="price-range">قیمت: ۱,۵۰۰,۰۰۰ - ۲,۲۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #2c3e50;"></div>
-                        <div class="color-icon" style="background-color: #34495e;"></div>
-                        <div class="color-icon" style="background-color: #2d3436;"></div>
-                    </div>
                 </div>
-                
-                <div class="stone-item">
-                    <div class="stone-name"> <a href="granite/ntanz.html">نطنز</a></div>
-                    <div class="price-range">قیمت: ۱,۲۰۰,۰۰۰ - ۱,۸۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #7f8c8d;"></div>
-                        <div class="color-icon" style="background-color: #95a5a6;"></div>
-                        <div class="color-icon" style="background-color: #636e72;"></div>
-</div>
-                </div>
-                
-                <div class="stone-item">
-                    <div class="stone-name">  <a href="granite/morvaridM.html"> مروارید مشهد</a></div>
-                    <div class="price-range">قیمت: ۱,۴۰۰,۰۰۰ - ۲,۰۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #ecf0f1;"></div>
-                        <div class="color-icon" style="background-color: #bdc3c7;"></div>
-                        <div class="color-icon" style="background-color: #dfe6e9;"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="price-info">
-                <h4>طیف قیمت گرانیت: از ۱,۲۰۰,۰۰۰ تومان (نطنز) تا ۲,۲۰۰,۰۰۰ تومان (نهبندان)</h4>
             </div>
         </div>
-        
-        <!-- دسته مرمریت -->
+
         <div id="marble" class="category-section">
             <h2 class="category-title">سنگ مرمریت</h2>
-            
             <div class="stone-list">
                 <div class="stone-item">
-                    <div class="stone-name"> <a href="marmarit/abadeh.html">آباده</a></div>
+                    <div class="stone-name"><a href="marmarit/abadeh.html">آباده</a></div>
                     <div class="price-range">قیمت: ۱,۰۰۰,۰۰۰ - ۱,۶۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #ecf0f1;"></div>
-                        <div class="color-icon" style="background-color: #bdc3c7;"></div>
-                        <div class="color-icon" style="background-color: #dfe6e9;"></div>
-                    </div>
-                </div>
-                
-                <div class="stone-item">
-                    <div class="stone-name"> <a href="marmarit/Kerman.html">کرمان</a></div>
-                    <div class="price-range">قیمت: ۱,۱۰۰,۰۰۰ - ۱,۷۰۰,۰۰۰ تومان</div>
-                    <div class="color-icons">
-                        <div class="color-icon" style="background-color: #d35400;"></div>
-                        <div class="color-icon" style="background-color: #e67e22;"></div>
-                        <div class="color-icon" style="background-color: #a04000;"></div>
-                    </div>
                 </div>
             </div>
-            
-            <div class="price-info">
-                <h4>طیف قیمت مرمریت: از ۱,۰۰۰,۰۰۰ تومان (آباده) تا ۱,۷۰۰,۰۰۰ تومان (کرمان)</h4>
-            </div>
-        </div>
-            </div>
-        </div>
-
-        <div id="granite" class="category-section" style="display: none;">
-            <h2 class="category-title">سنگ گرانیت</h2>
-            <!-- محتوای گرانیت -->
-        </div>
-
-        <div id="marble" class="category-section" style="display: none;">
-            <h2 class="category-title">سنگ مرمریت</h2>
-            <!-- محتوای مرمریت -->
         </div>
     </div>
 
     <script>
-    function showCategory(category) {
-        console.log("🔄 تغییر دسته به:", category);
+    function switchToCategory(category) {
+        console.log("تغییر به دسته:", category);
         
         // مخفی کردن همه بخش‌ها
-        document.querySelectorAll('.category-section').forEach(section => {
+        const sections = document.querySelectorAll('.category-section');
+        sections.forEach(section => {
             section.style.display = 'none';
+            section.classList.remove('active');
         });
         
         // غیرفعال کردن همه دکمه‌ها
-        document.querySelectorAll('.category-btn').forEach(btn => {
+        const buttons = document.querySelectorAll('.category-btn');
+        buttons.forEach(btn => {
             btn.classList.remove('active');
         });
         
@@ -183,7 +75,7 @@
         const targetSection = document.getElementById(category);
         if (targetSection) {
             targetSection.style.display = 'block';
-            console.log("✅ بخش نمایش داده شد:", category);
+            targetSection.classList.add('active');
         }
         
         // فعال کردن دکمه کلیک شده
