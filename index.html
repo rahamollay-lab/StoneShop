@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html lang="fa-IR" dir="rtl">
 
-   <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فروشگاه آنلاین سنگ</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
-    
-  
-    <script src="html/header-component.js"></script>
 </head>
-    <body>
- <header-component></header-component>
-        <section class="hero-section">
-            <div class="container">
-            </div>
-            </div>
+
+<body>
+    <header-component></header-component>
+    
+    <section class="hero-section">
+        <div class="container">
             <h1 class="hero-title">سنگ ساختمانی با کیفیت و قیمت استثنایی</h1>
-            <p class="hero-subtitle">مرغوب‌ترین سنگ های تراورتن، گرانیت و مرمیت را با بهترین قیمت و ضمانت کیفیت تجربه
-                کنید</p>
+            <p class="hero-subtitle">مرغوب‌ترین سنگ های تراورتن، گرانیت و مرمیت را با بهترین قیمت و ضمانت کیفیت تجربه کنید</p>
 
             <div class="hero-cta">
-                <button class="cta-btn" onclick="window.location.href='./html/product.html'" >
+                <button class="cta-btn" onclick="window.location.href='./html/product.html'">
                     <span>🛍️</span>
                     مشاهده محصولات
                 </button>
                 <button class="cta-btn cta-secondary" onclick="showConsultation()">
-                    <!--  -->
                     <span>💎</span>
                     مشاوره رایگان
                 </button>
@@ -52,91 +47,87 @@
                     <div class="stat-text">نوع سنگ مختلف</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="main-categories">
+            <h2 class="section-title">انواع سنگ های ساختمانی</h2>
+            <p class="section-subtitle">با کیفیت ترین سنگ های بازار را با قیمت مستقیم کارخانه خریداری کنید</p>
+
+            <div class="categories-grid">
+                <!-- تراورتن -->
+                <div class="category-card category-travertine">
+                    <div class="category-badge">محبوب ترین</div>
+                    <div class="category-image">
+                        <img src="images/tekab-1.jpg" alt="سنگ تراورتن">
+                        سنگ تراورتن
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-name">سنگ تراورتن</h3>
+                        <div class="category-price">قیمت: ۵۰۰,۰۰۰ تا ۳,۵۰۰,۰۰۰ تومان</div>
+                        <ul class="category-features">
+                            <li>مناسب برای نما و دکوراسیون داخلی</li>
+                            <li>مقاوم در برابر یخ‌زدگی و رطوبت</li>
+                            <li>تنوع رنگی بسیار بالا</li>
+                            <li>قیمت بسیار مناسب و اقتصادی</li>
+                        </ul>
+                        <button class="category-btn" onclick="window.location.href='html/product.html'">
+                            <span>👁️</span>
+                            مشاهده محصولات تراورتن
+                        </button>
+                    </div>
+                </div>
+
+                <!-- گرانیت -->
+                <div class="category-card category-granite">
+                    <div class="category-badge">مقاوم ترین</div>
+                    <div class="category-image">
+                        <img src="images/granite.jpg" alt="سنگ گرانیت">
+                        سنگ گرانیت
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-name">سنگ گرانیت</h3>
+                        <div class="category-price">قیمت: ۸۰۰,۰۰۰ تا ۵,۰۰۰,۰۰۰ تومان</div>
+                        <ul class="category-features">
+                            <li>مقاومت بسیار بالا در برابر سایش</li>
+                            <li>مناسب برای فضاهای پرتردد</li>
+                            <li>جذب آب نزدیک به صفر</li>
+                            <li>طول عمر و ماندگاری فوق العاده</li>
+                        </ul>
+                        <button class="category-btn" onclick="window.location.href='html/product.html'">
+                            <span>👁️</span>
+                            مشاهده محصولات گرانیت
+                        </button>
+                    </div>
+                </div>
+
+                <!-- مرمیت -->
+                <div class="category-card category-marmite">
+                    <div class="category-badge">لوکس ترین</div>
+                    <div class="category-image">
+                        <img src="images/marmarit.jpg" alt="سنگ مرمیت">
+                        سنگ مرمیت
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-name">سنگ مرمیت</h3>
+                        <div class="category-price">قیمت: ۱,۲۰۰,۰۰۰ تا ۶,۰۰۰,۰۰۰ تومان</div>
+                        <ul class="category-features">
+                            <li>ظاهری لوکس و درخشنده</li>
+                            <li>مناسب برای دکوراسیون مدرن</li>
+                            <li>سطح صیقلی و زیبا</li>
+                            <li>مقاوم در برابر خراش و سایش</li>
+                        </ul>
+                        <button class="category-btn" onclick="window.location.href='html/product.html'">
+                            <span>👁️</span>
+                            مشاهده محصولات مرمیت
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="container">
-            <section class="main-categories">
-                <h2 class="section-title">انواع سنگ های ساختمانی</h2>
-                <p class="section-subtitle">با کیفیت ترین سنگ های بازار را با قیمت مستقیم کارخانه خریداری کنید</p>
-
-                <div class="categories-grid">
-                    <!-- تراورتن -->
-                    <div class="category-card category-travertine">
-                        <div class="category-badge">محبوب ترین</div>
-                        <div class="category-image">
-                            <img src="picher/tekab-1.jpg" alt="">
-                            سنگ تراورتن
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-name">سنگ تراورتن</h3>
-                            <div class="category-price">قیمت: ۵۰۰,۰۰۰ تا ۳,۵۰۰,۰۰۰ تومان</div>
-
-                            <ul class="category-features">
-                                <li>مناسب برای نما و دکوراسیون داخلی</li>
-                                <li>مقاوم در برابر یخ‌زدگی و رطوبت</li>
-                                <li>تنوع رنگی بسیار بالا</li>
-                                <li>قیمت بسیار مناسب و اقتصادی</li>
-                            </ul>
-
-                            <button class="category-btn" onclick="window.location.href='html/product.html'" >
-                                <span>👁️</span>
-                                مشاهده محصولات تراورتن
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- گرانیت -->
-                    <div class="category-card category-granite">
-                        <div class="category-badge">مقاوم ترین</div>
-                        <div class="category-image">
-                            سنگ گرانیت
-                            <img src="picher/blog_resized_855_453_21_1532345498_granite_bdellium.jpg" alt="">
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-name">سنگ گرانیت</h3>
-                            <div class="category-price">قیمت: ۸۰۰,۰۰۰ تا ۵,۰۰۰,۰۰۰ تومان</div>
-
-                            <ul class="category-features">
-                                <li>مقاومت بسیار بالا در برابر سایش</li>
-                                <li>مناسب برای فضاهای پرتردد</li>
-                                <li>جذب آب نزدیک به صفر</li>
-                                <li>طول عمر و ماندگاری فوق العاده</li>
-                            </ul>
-                            <button class="category-btn" onclick="window.location.href='html/product.html'">
-                                <span>👁️</span>
-                                مشاهده محصولات گرانیت
-                            </button>
-
-                            <!-- مرمیت -->
-                            <div class="category-card category-marmite">
-                                <div class="category-badge">لوکس ترین</div>
-                                <div class="category-image">
-                                    <img src="picher/marmarit.jpg" alt="">
-                                    سنگ مرمیت
-                            
-                                </div>
-                                <div class="category-content">
-                                    <h3 class="category-name">سنگ مرمیت</h3>
-                                    <div class="category-price">قیمت: ۱,۲۰۰,۰۰۰ تا ۶,۰۰۰,۰۰۰ تومان</div>
-
-                                    <ul class="category-features">
-                                        <li>ظاهری لوکس و درخشنده</li>
-                                        <li>مناسب برای دکوراسیون مدرن</li>
-                                        <li>سطح صیقلی و زیبا</li>
-                                        <li>مقاوم در برابر خراش و سایش</li>
-                                    </ul>
-
-                                    <button class="category-btn" onclick="window.location.href='html/product.html'">
-                                        <span>👁️</span>
-                                        مشاهده محصولات مرمیت
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-            </section>
-
-            <!-- محصولات پرفروش و تخفیف‌دار -->
+      <!-- محصولات پرفروش و تخفیف‌دار -->
             <section class="featured-products">
                 <h2 class="section-title">پرفروش‌ترین محصولات</h2>
                 <p class="section-subtitle">محبوب‌ترین سنگ‌های ما با بهترین قیمت و کیفیت</p>
@@ -299,21 +290,18 @@
             </div>
             </div>
         </footer>
-        <script>
+    </div>
 
-function showCategory(category, element) {
-    document.querySelectorAll('.category-section').forEach(section => {
-        section.classList.remove('active');
-    });
-    document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.getElementById(category).classList.add('active');
-    element.classList.add('active');
-}
-</script>
-<script src="./js/script.js"></script>
-<script src="./js/cart.js"></script>
-    </body>
+    <script>
+        // تابع showConsultation باید تعریف شود
+        function showConsultation() {
+            alert('خدمات مشاوره به زودی فعال می‌شود');
+            // یا modal نمایش دهید
+        }
+    </script>
+  <script src="html/header-component.js"></script>
+<script src="js/script.js"></script>
+<script src="js/cart.js"></script>
+</body>
 
 </html>

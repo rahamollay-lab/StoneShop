@@ -4,7 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محصولات سنگ های ساختمانی | سنگ افزار</title>
-    <link rel="stylesheet" href="/css/style-product.css">
+    
+    <!-- اضافه کردن فونت و استایل‌های پایه -->
+     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-product.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    
+    <style>
+        /* استایل‌های پایه برای صفحه محصولات */
+        .page-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 12px 24px;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .category-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .category-section.active {
+            display: block;
+        }
+        
+        .category-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .stone-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stone-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stone-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .stone-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .stone-name a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .stone-name a:hover {
+            color: #3498db;
+        }
+        
+        .price-range {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .color-icons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .color-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .color-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+            .page-title { font-size: 2rem; }
+            .category-title { font-size: 1.5rem; }
+            .stone-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
 <body>
     <header-component></header-component>
 
@@ -33,9 +175,9 @@
                     <div class="stone-name"><a href="travertine/abas.html">عباس اباد</a></div>
                     <div class="price-range">قیمت: ۸۰۰,۰۰۰ - ۱,۲۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #f39c12;"></div>
-                        <div class="color-icon" style="background-color: #e67e22;"></div>
-                        <div class="color-icon" style="background-color: #d35400;"></div>
+                        <div class="color-icon" style="background-color: #f39c12;" title="طلایی"></div>
+                        <div class="color-icon" style="background-color: #e67e22;" title="نارنجی"></div>
+                        <div class="color-icon" style="background-color: #d35400;" title="قهوه‌ای"></div>
                     </div>
                 </div>
                 
@@ -43,9 +185,9 @@
                     <div class="stone-name"><a href="travertine/bokhar.html">دره بخاری</a></div>
                     <div class="price-range">قیمت: ۷۰۰,۰۰۰ - ۱,۱۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #7f8c8d;"></div>
-                        <div class="color-icon" style="background-color: #95a5a6;"></div>
-                        <div class="color-icon" style="background-color: #636e72;"></div>
+                        <div class="color-icon" style="background-color: #7f8c8d;" title="خاکستری"></div>
+                        <div class="color-icon" style="background-color: #95a5a6;" title="نقره‌ای"></div>
+                        <div class="color-icon" style="background-color: #636e72;" title="دودی"></div>
                     </div>
                 </div>
                 
@@ -53,9 +195,9 @@
                     <div class="stone-name"><a href="travertine/hajy.html">حاجی آباد</a></div>
                     <div class="price-range">قیمت: ۹۰۰,۰۰۰ - ۱,۴۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #e74c3c;"></div>
-                        <div class="color-icon" style="background-color: #c0392b;"></div>
-                        <div class="color-icon" style="background-color: #d35400;"></div>
+                        <div class="color-icon" style="background-color: #e74c3c;" title="قرمز"></div>
+                        <div class="color-icon" style="background-color: #c0392b;" title="شرابی"></div>
+                        <div class="color-icon" style="background-color: #d35400;" title="قهوه‌ای"></div>
                     </div>
                 </div>
                 
@@ -63,9 +205,9 @@
                     <div class="stone-name"><a href="travertine/kashan.html">کاشان</a></div>
                     <div class="price-range">قیمت: ۶۵۰,۰۰۰ - ۱,۰۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #f1c40f;"></div>
-                        <div class="color-icon" style="background-color: #f39c12;"></div>
-                        <div class="color-icon" style="background-color: #e67e22;"></div>
+                        <div class="color-icon" style="background-color: #f1c40f;" title="زرد"></div>
+                        <div class="color-icon" style="background-color: #f39c12;" title="طلایی"></div>
+                        <div class="color-icon" style="background-color: #e67e22;" title="نارنجی"></div>
                     </div>
                 </div>
             </div>
@@ -80,9 +222,9 @@
                     <div class="stone-name"><a href="granite/nehbandan.html">نهبندان</a></div>
                     <div class="price-range">قیمت: ۱,۵۰۰,۰۰۰ - ۲,۲۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #2c3e50;"></div>
-                        <div class="color-icon" style="background-color: #34495e;"></div>
-                        <div class="color-icon" style="background-color: #2d3436;"></div>
+                        <div class="color-icon" style="background-color: #2c3e50;" title="مشکی"></div>
+                        <div class="color-icon" style="background-color: #34495e;" title="خاکستری تیره"></div>
+                        <div class="color-icon" style="background-color: #2d3436;" title="مشکی مات"></div>
                     </div>
                 </div>
                 
@@ -90,9 +232,9 @@
                     <div class="stone-name"><a href="granite/ntanz.html">نطنز</a></div>
                     <div class="price-range">قیمت: ۱,۲۰۰,۰۰۰ - ۱,۸۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #7f8c8d;"></div>
-                        <div class="color-icon" style="background-color: #95a5a6;"></div>
-                        <div class="color-icon" style="background-color: #636e72;"></div>
+                        <div class="color-icon" style="background-color: #7f8c8d;" title="خاکستری"></div>
+                        <div class="color-icon" style="background-color: #95a5a6;" title="نقره‌ای"></div>
+                        <div class="color-icon" style="background-color: #636e72;" title="دودی"></div>
                     </div>
                 </div>
                 
@@ -100,9 +242,9 @@
                     <div class="stone-name"><a href="granite/movariqM.html">مروارید مشهد</a></div>
                     <div class="price-range">قیمت: ۱,۴۰۰,۰۰۰ - ۲,۰۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #ecf0f1;"></div>
-                        <div class="color-icon" style="background-color: #bdc3c7;"></div>
-                        <div class="color-icon" style="background-color: #dfe6e9;"></div>
+                        <div class="color-icon" style="background-color: #ecf0f1;" title="سفید"></div>
+                        <div class="color-icon" style="background-color: #bdc3c7;" title="کرم"></div>
+                        <div class="color-icon" style="background-color: #dfe6e9;" title="سفید یخی"></div>
                     </div>
                 </div>
             </div>
@@ -117,9 +259,9 @@
                     <div class="stone-name"><a href="marmarit/abadeh.html">آباده</a></div>
                     <div class="price-range">قیمت: ۱,۰۰۰,۰۰۰ - ۱,۶۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #ecf0f1;"></div>
-                        <div class="color-icon" style="background-color: #bdc3c7;"></div>
-                        <div class="color-icon" style="background-color: #dfe6e9;"></div>
+                        <div class="color-icon" style="background-color: #ecf0f1;" title="سفید"></div>
+                        <div class="color-icon" style="background-color: #bdc3c7;" title="کرم"></div>
+                        <div class="color-icon" style="background-color: #dfe6e9;" title="سفید یخی"></div>
                     </div>
                 </div>
                 
@@ -127,19 +269,16 @@
                     <div class="stone-name"><a href="marmarit/kerman.html">کرمان</a></div>
                     <div class="price-range">قیمت: ۱,۱۰۰,۰۰۰ - ۱,۷۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
-                        <div class="color-icon" style="background-color: #d35400;"></div>
-                        <div class="color-icon" style="background-color: #e67e22;"></div>
-                        <div class="color-icon" style="background-color: #a04000;"></div>
+                        <div class="color-icon" style="background-color: #d35400;" title="قهوه‌ای"></div>
+                        <div class="color-icon" style="background-color: #e67e22;" title="نارنجی"></div>
+                        <div class="color-icon" style="background-color: #a04000;" title="قهوه‌ای تیره"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- جاوااسکریپت -->
-    <script>
-        // مدیریت دسته‌بندی‌ها
-        document.addEventListener('DOMContentLoaded', function() {
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
             const categoryButtons = document.querySelectorAll('.category-btn');
             const categorySections = document.querySelectorAll('.category-section');
             
@@ -147,22 +286,28 @@
                 button.addEventListener('click', function() {
                     const category = this.getAttribute('data-category');
                     
-                    // غیرفعال کردن همه دکمه‌ها
                     categoryButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // مخفی کردن همه بخش‌ها
                     categorySections.forEach(section => section.classList.remove('active'));
                     
-                    // فعال کردن دکمه و بخش انتخاب شده
                     this.classList.add('active');
                     document.getElementById(category).classList.add('active');
                 });
             });
+
+            // مدیریت لینک‌ها با مسیرهای صحیح
+            document.querySelectorAll('a[href*="travertine/"]').forEach(link => {
+                link.href = '../products/' + link.href;
+            });
+            document.querySelectorAll('a[href*="granite/"]').forEach(link => {
+                link.href = '../products/' + link.href;
+            });
+            document.querySelectorAll('a[href*="marmarit/"]').forEach(link => {
+                link.href = '../products/' + link.href;
+            });
         });
     </script>
-
-    <!-- فایل‌های خارجی -->
-    <script src="header-component.js"></script>
-    <script src="js/cart.js"></script>
+    
+    <script src="../html/header-component.js"></script>
+    <script src="../js/cart.js"></script>
 </body>
 </html>
