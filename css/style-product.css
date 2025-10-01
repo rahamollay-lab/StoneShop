@@ -753,3 +753,146 @@ padding: 40px;
         height: 20px;
     }
 }
+
+        .page-hero {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 12px 30px;
+            border: 2px solid #e67e22;
+            background: white;
+            color: #e67e22;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover {
+            background: #e67e22;
+            color: white;
+        }
+        
+        .category-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .category-section.active {
+            display: block;
+        }
+        
+        .category-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .stone-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .stone-item {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+        
+        .stone-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stone-name {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .stone-name a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        
+        .stone-name a:hover {
+            color: #e67e22;
+        }
+        
+        .price-range {
+            color: #e67e22;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .color-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .color-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+        }
+        
+        .price-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .price-info h4 {
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ریسپانسیو برای موبایل */
+        @media (max-width: 768px) {
+            .page-title { font-size: 1.8rem; }
+            .page-subtitle { font-size: 1rem; }
+            .category-filters { flex-direction: column; align-items: center; }
+            .category-btn { width: 200px; }
+            .stone-list { grid-template-columns: 1fr; }
+            .stone-item { padding: 20px; }
+        }
+   
