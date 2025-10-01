@@ -37,9 +37,9 @@
 </div>
     <div class="container">
  <div class="category-filters">
-    <button class="category-btn active" onclick="showCategory('travertine', event)">تراورتن</button>
-    <button class="category-btn" onclick="showCategory('granite', event)">گرانیت</button>
-    <button class="category-btn" onclick="showCategory('marble', event)">مرمریت</button>
+    <button class="category-btn active" onclick="showCategory('travertine')">تراورتن</button>
+    <button class="category-btn" onclick="showCategory('granite')">گرانیت</button>
+    <button class="category-btn" onclick="showCategory('marble')">مرمریت</button>
 </div>
 </div>
         
@@ -168,39 +168,48 @@
     </div>
 
  <script>
+// تابع ساده و بدون خطا
 function showCategory(category) {
-    console.log("✅ تابع فراخوانی شد برای:", category);
+    console.log("دسته‌بندی انتخاب شد:", category);
     
-    // ۱. مخفی کردن همه بخش‌ها
-    const sections = document.querySelectorAll('.category-section');
-    sections.forEach(section => {
+    // مخفی کردن همه بخش‌ها
+    document.querySelectorAll('.category-section').forEach(section => {
         section.style.display = 'none';
-        section.classList.remove('active');
     });
     
-    // ۲. غیرفعال کردن همه دکمه‌ها
-    const buttons = document.querySelectorAll('.category-btn');
-    buttons.forEach(btn => {
-        btn.classList.remove('active');
-    });
-    
-    // ۳. نمایش بخش انتخاب شده
+    // نمایش بخش انتخاب شده
     const targetSection = document.getElementById(category);
     if (targetSection) {
         targetSection.style.display = 'block';
-        targetSection.classList.add('active');
-        console.log("✅ بخش نمایش داده شد:", category);
     }
     
-    // ۴. پیدا کردن دکمه کلیک شده و فعال کردنش
-    const clickedButton = event.target;
-    clickedButton.classList.add('active');
+    // مدیریت دکمه‌های فعال
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
     
-    console.log("✅ عملیات کامل شد");
+    // پیدا کردن و فعال کردن دکمه کلیک شده
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(btn => {
+        if (btn.textContent.trim() === getButtonText(category)) {
+            btn.classList.add('active');
+        }
+    });
 }
 
-// اضافه کردن به window برای اطمینان
+// تابع کمکی برای پیدا کردن متن دکمه
+function getButtonText(category) {
+    const texts = {
+        'travertine': 'تراورتن',
+        'granite': 'گرانیت', 
+        'marble': 'مرمریت'
+    };
+    return texts[category] || category;
+}
+
+// مطمئن شو تابع全局 هست
 window.showCategory = showCategory;
+console.log("✅ توابع JS بارگذاری شدند");
 </script>
 
     <!-- فایل‌های JS -->
