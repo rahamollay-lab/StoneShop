@@ -294,14 +294,14 @@ class HeaderComponent extends HTMLElement {
                         <!-- منوی اصلی -->
                         <ul class="nav-links">
                             <li>
-                                <a href="pagehome.html" class="nav-link active">
+                                <a href="index.html" class="nav-link active">
                                     <span class="nav-icon">🏠</span>
                                     خانه
                                 </a>
                             </li>
                             
                             <li class="dropdown">
-                                <a href="product.html">
+                                <a href="./html/product.html">
                                     <span class="nav-icon">📦</span>
                                     محصولات
                                     <span style="font-size: 0.8rem; margin-right: 5px;"></span>
