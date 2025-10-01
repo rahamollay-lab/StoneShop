@@ -168,25 +168,39 @@
     </div>
 
  <script>
-function showCategory(category, clickEvent) {
-    console.log("دسته انتخاب شده:", category);
+function showCategory(category) {
+    console.log("✅ تابع فراخوانی شد برای:", category);
     
-    // مخفی کردن همه بخش‌ها
-    document.querySelectorAll('.category-section').forEach(section => {
+    // ۱. مخفی کردن همه بخش‌ها
+    const sections = document.querySelectorAll('.category-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
         section.classList.remove('active');
     });
     
-    // غیرفعال کردن همه دکمه‌ها
-    document.querySelectorAll('.category-btn').forEach(btn => {
+    // ۲. غیرفعال کردن همه دکمه‌ها
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(btn => {
         btn.classList.remove('active');
     });
     
-    // نمایش بخش انتخاب شده
-    document.getElementById(category).classList.add('active');
+    // ۳. نمایش بخش انتخاب شده
+    const targetSection = document.getElementById(category);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+        targetSection.classList.add('active');
+        console.log("✅ بخش نمایش داده شد:", category);
+    }
     
-    // فعال کردن دکمه انتخاب شده
-    clickEvent.target.classList.add('active');
+    // ۴. پیدا کردن دکمه کلیک شده و فعال کردنش
+    const clickedButton = event.target;
+    clickedButton.classList.add('active');
+    
+    console.log("✅ عملیات کامل شد");
 }
+
+// اضافه کردن به window برای اطمینان
+window.showCategory = showCategory;
 </script>
 
     <!-- فایل‌های JS -->
