@@ -1,3 +1,4 @@
+window.showCategory = showCategory;
 function showCategory(category, element) {
     // مخفی کردن همه بخش‌ها
     document.querySelectorAll('.category-section').forEach(section => {

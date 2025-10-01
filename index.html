@@ -299,6 +299,19 @@
             </div>
             </div>
         </footer>
+        <script>
+
+function showCategory(category, element) {
+    document.querySelectorAll('.category-section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.getElementById(category).classList.add('active');
+    element.classList.add('active');
+}
+</script>
 <script src="./js/script.js"></script>
 <script src="./js/cart.js"></script>
     </body>
