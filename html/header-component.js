@@ -337,7 +337,7 @@ class HeaderComponent extends HTMLElement {
 
                         <!-- اقدامات کاربر -->
                         <div class="user-actions">
-                            <button class="action-btn consultation-btn">
+                            <button class="action-btn consultation-btn" onclick="showConsultation()">
                                 <span>💎</span>
                                 مشاوره رایگان
                             </button>
