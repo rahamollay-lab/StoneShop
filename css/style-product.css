@@ -688,3 +688,68 @@ padding: 40px;
         justify-content: center;
     }
 }
+/* 📱 استایل‌های مخصوص موبایل */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .page-hero {
+        padding: 30px 0;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .category-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .category-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .stone-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .stone-item {
+        padding: 12px;
+        margin: 0;
+    }
+
+    .stone-name {
+        font-size: 1rem;
+    }
+
+    .price-range {
+        font-size: 0.9rem;
+    }
+
+    .color-icons {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .color-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
