@@ -9,7 +9,7 @@
     <script src="/html/header-component.js"></script>
     
     <style>
-        /* استایل‌های اصلی */
+
         * {
             margin: 0;
             padding: 0;
@@ -31,7 +31,7 @@
             padding: 0 20px;
         }
         
-        /* هدر صفحه */
+     
         .page-hero {
             background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             color: white;
@@ -223,10 +223,7 @@
         .product-card {
             animation: fadeInUp 0.6s ease;
         }
-        font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
+       
         
         .product-category {
             color: #7f8c8d;
@@ -373,13 +370,16 @@
         .spec-icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
-            color: #e67e22;
+            color: #e67e22; font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <header-component></header-component>
 
-    <!-- هدر صفحه -->
+ 
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">تراورتن کاشان</h1>
@@ -391,11 +391,11 @@
         <!-- فیلتر محصولات -->
         <div class="product-filters">
             <button class="filter-btn active" data-filter="all">همه محصولات</button>
-            <button class="filter-btn" data-filter="cream">کرم</button>
+            <!-- <button class="filter-btn" data-filter="cream">کرم</button>
             <button class="filter-btn" data-filter="honey">کرم عسلی</button>
             <button class="filter-btn" data-filter="brown">کرم قهوه‌ای</button>
             <button class="filter-btn" data-filter="super">سوپر</button>
-            <button class="filter-btn" data-filter="momtaz">ممتاز</button>
+            <button class="filter-btn" data-filter="momtaz">ممتاز</button> -->
         </div>
 
         <!-- محصولات -->
@@ -404,7 +404,7 @@
             <div class="product-card" data-category="cream super">
                 <div class="product-image">
                     <div class="product-badge">پرفروش</div>
-                    تصویر سنگ تراورتن کاشان کرم سوپر
+                   <img src="/picher/kasDrjone.jpeg" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن کاشان کرم سوپر</h3>
@@ -430,7 +430,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم سوپر" data-price="800000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم سوپر" data-price="800000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -441,7 +442,7 @@
             <div class="product-card" data-category="cream momtaz">
                 <div class="product-image">
                     <div class="product-badge">اقتصادی</div>
-                    تصویر سنگ تراورتن کاشان کرم ممتاز
+                  <img src="/picher/travertine_cream_kashan_momtaz_texture-e1683023900279.jpg" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن کاشان کرم ممتاز</h3>
@@ -466,7 +467,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم ممتاز" data-price="700000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم ممتاز" data-price="700000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -477,7 +479,7 @@
             <div class="product-card" data-category="honey super">
                 <div class="product-image">
                     <div class="product-badge">محبوب</div>
-                    تصویر سنگ تراورتن کاشان کرم عسلی سوپر
+                  <img src="/picher/kermAsalyKashan7.jpeg" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن کاشان کرم عسلی سوپر</h3>
@@ -502,7 +504,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم عسلی سوپر" data-price="650000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم عسلی سوپر" data-price="650000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -537,7 +540,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم عسلی ممتاز" data-price="500000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم عسلی ممتاز" data-price="500000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -573,7 +577,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم قهوه‌ای سوپر" data-price="700000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم قهوه‌ای سوپر" data-price="700000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -609,7 +614,8 @@
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن کاشان کرم قهوه‌ای ممتاز" data-price="600000">
+                    <button class="order-btn" data-product="تراورتن کاشان کرم قهوه‌ای ممتاز" data-price="600000"
+                    onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -706,7 +712,7 @@ this.classList.add('active');
                     
                     // نمایش مودال سفارش
                     const modal = document.createElement('div');
-                    modal.style.cssText = 
+                    modal.style.cssText = `
                         position: fixed;
                         top: 0;
                         left: 0;
@@ -717,7 +723,7 @@ this.classList.add('active');
                         align-items: center;
                         justify-content: center;
                         z-index: 10000;
-                    ;
+                    ;`
                     
                     modal.innerHTML = 
                         <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%;">

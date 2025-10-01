@@ -8,7 +8,7 @@
     <script src="/html/header-component.js"></script>
     
     <style>
-        /* استایل‌های اصلی */
+
         * {
             margin: 0;
             padding: 0;
@@ -221,7 +221,7 @@ color: #2c3e50;
         .product-card {
             animation: fadeInUp 0.6s ease;
         }
-        }
+        
         
         .product-category {
             color: #7f8c8d;
@@ -378,7 +378,7 @@ color: #2c3e50;
 <body>
     <header-component></header-component>
 
-    <!-- هدر صفحه -->
+
     <section class="page-hero">
         <div class="container">
             <h1 class="page-title">تراورتن عباس آباد</h1>
@@ -390,11 +390,11 @@ color: #2c3e50;
         <!-- فیلتر محصولات -->
         <div class="product-filters">
             <button class="filter-btn active" data-filter="all">همه محصولات</button>
-            <button class="filter-btn" data-filter="white">سفید</button>
+            <!-- <button class="filter-btn" data-filter="white">سفید</button>
             <button class="filter-btn" data-filter="cream">کرم</button>
             <button class="filter-btn" data-filter="cream-white">کرم سفید</button>
             <button class="filter-btn" data-filter="super">سوپر</button>
-            <button class="filter-btn" data-filter="momtaz">ممتاز</button>
+            <button class="filter-btn" data-filter="momtaz">ممتاز</button> -->
         </div>
 
         <!-- محصولات -->
@@ -403,7 +403,7 @@ color: #2c3e50;
             <div class="product-card" data-category="white super">
                 <div class="product-image">
                     <div class="product-badge">پرطرفدار</div>
-                    تصویر سنگ تراورتن عباس آباد سفید سوپر
+                <img src="/picher/e7e47f2f-eaec-45b5-afe1-e54f40837893.jpeg" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن عباس آباد سفید سوپر</h3>
@@ -429,7 +429,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد سفید سوپر" data-price="3500000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد سفید سوپر" data-price="3500000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -440,7 +440,7 @@ color: #2c3e50;
             <div class="product-card" data-category="white momtaz">
                 <div class="product-image">
                     <div class="product-badge">اقتصادی</div>
-                    تصویر سنگ تراورتن عباس آباد سفید ممتاز
+                  <img src="/picher/" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن عباس آباد سفید ممتاز</h3>
@@ -465,7 +465,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد سفید ممتاز" data-price="3000000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد سفید ممتاز" data-price="3000000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -476,7 +476,7 @@ color: #2c3e50;
             <div class="product-card" data-category="cream super">
                 <div class="product-image">
                     <div class="product-badge">پرفروش</div>
-                    تصویر سنگ تراورتن عباس آباد کرم سوپر
+                
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن عباس آباد کرم سوپر</h3>
@@ -501,7 +501,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سوپر" data-price="2800000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سوپر" data-price="2800000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -536,7 +536,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم ممتاز" data-price="2200000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم ممتاز" data-price="2200000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -547,7 +547,7 @@ color: #2c3e50;
             <div class="product-card" data-category="cream-white super">
                 <div class="product-image">
                     <div class="product-badge">جدید</div>
-                    تصویر سنگ تراورتن عباس آباد کرم سفید سوپر
+                    <img src="/picher/abasKremSefid.jpg" alt="">
                 </div>
                 <div class="product-content">
                     <h3 class="product-name">تراورتن عباس آباد کرم سفید سوپر</h3>
@@ -572,7 +572,7 @@ color: #2c3e50;
                         </div>
                     </div>
                     
-                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سفید سوپر" data-price="3000000">
+                    <button class="order-btn" data-product="تراورتن عباس آباد کرم سفید سوپر" data-price="3000000" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         افزودن به سبد خرید
                     </button>
@@ -705,7 +705,7 @@ this.classList.add('active');
                     
                     // نمایش مودال سفارش
                     const modal = document.createElement('div');
-                    modal.style.cssText = 
+                    modal.style.cssText = `
                         position: fixed;
                         top: 0;
                         left: 0;
@@ -716,7 +716,7 @@ this.classList.add('active');
                         align-items: center;
                         justify-content: center;
                         z-index: 10000;
-                    ;
+                    ;`
                     
                     modal.innerHTML = 
                         <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%;">

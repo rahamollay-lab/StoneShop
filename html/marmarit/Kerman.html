@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مرمریت کرمان | سنگ نصف جهان</title>
-    
-    <!-- اضافه کردن فونت Vazir -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
     <script src="/html/header-component.js"></script>
     
     <style>
-        /* استایل‌های اصلی */
         * {
             margin: 0;
             padding: 0;
@@ -466,7 +463,7 @@
         <!-- محتوای اصلی -->
         <div class="product-content">
             <div class="product-image">
-                مرمریت کرمان
+               <img src="/picher/kerman.jpeg" alt="">
             </div>
             
             <div class="product-details">
@@ -532,7 +529,7 @@
                 
                 <!-- دکمه‌های اقدام -->
                 <div class="action-buttons">
-                    <button class="order-btn">
+                    <button class="order-btn" onclick="window.location.href='/html/cartItem.html'">
                         <span>🛒</span>
                         سفارش محصول
                     </button>
@@ -612,7 +609,7 @@
 align-items: center;
                     justify-content: center;
                     z-index: 10000;
-                ;
+                ;`
                 
                 modal.innerHTML = 
                     <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 500px; width: 90%; font-family: Vazir, sans-serif;">
@@ -646,7 +643,7 @@ align-items: center;
             
             consultationBtn.addEventListener('click', function() {
                 const modal = document.createElement('div');
-                modal.style.cssText = 
+                modal.style.cssText = `
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -657,7 +654,7 @@ align-items: center;
                     align-items: center;
                     justify-content: center;
                     z-index: 10000;
-                ;
+                ;`
                 
                 modal.innerHTML = 
                     <div style="background: white; padding: 30px; border-radius: 20px; text-align: center; max-width: 450px; width: 90%; font-family: Vazir, sans-serif;">
@@ -674,7 +671,7 @@ align-items: center;
                             </button>
                         </div>
                     </div>
-                ;`
+                ;
                 
                 document.body.appendChild(modal);
             });

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محصولات سنگ های ساختمانی | سنگ افزار</title>
-    <link rel="stylesheet" href="/css/style-product.css">
+  <link rel="stylesheet" href="../css/style-product.css">
     <script src="/html/header-component.js"></script>
     
 </head>
@@ -36,11 +36,12 @@
    
 </div>
     <div class="container">
-        <div class="category-filters">
-            <button class="category-btn active" onclick="showCategory('travertine')">تراورتن</button>
-            <button class="category-btn" onclick="showCategory('granite')">گرانیت</button>
-            <button class="category-btn" onclick="showCategory('marble')">مرمریت</button>
-        </div>
+    <div class="category-filters">
+        <button class="category-btn active" onclick="showCategory('travertine', event)">تراورتن</button>
+        <button class="category-btn" onclick="showCategory('granite', event)">گرانیت</button>
+        <button class="category-btn" onclick="showCategory('marble', event)">مرمریت</button>
+    </div>
+</div>
         
         <!-- دسته تراورتن -->
         <div id="travertine" class="category-section active">
@@ -48,7 +49,7 @@
             
             <div class="stone-list">
                 <div class="stone-item">
-                    <div class="stone-name"><a href="/html/travertine/Abas.html">عباس اباد</a> </div>
+                    <div class="stone-name"><a href="abas.html">عباس اباد</a> </div>
                     <div class="price-range">قیمت: ۸۰۰,۰۰۰ - ۱,۲۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #f39c12;"></div>
@@ -58,7 +59,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name"> <a href="/html/travertine/bokhar.html"> دره بخاری</a></div>
+                    <div class="stone-name"> <a href="travertine/bokhar.html"> دره بخاری</a></div>
                     <div class="price-range">قیمت: ۷۰۰,۰۰۰ - ۱,۱۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #7f8c8d;"></div>
@@ -68,7 +69,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name"><a href="/html/travertine/hajy.html">حاجی آباد</a></div>
+                    <div class="stone-name"><a href="travertine/hajy.html">حاجی آباد</a></div>
                     <div class="price-range">قیمت: ۹۰۰,۰۰۰ - ۱,۴۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #e74c3c;"></div>
@@ -78,7 +79,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name"><a href="/html/travertine/kashan.html">کاشان</a></div>
+                    <div class="stone-name"><a href="travertine/kashan.html">کاشان</a></div>
                     <div class="price-range">قیمت: ۶۵۰,۰۰۰ - ۱,۰۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #f1c40f;"></div>
@@ -99,7 +100,7 @@
             
             <div class="stone-list">
                 <div class="stone-item">
-                    <div class="stone-name"><a href="/html/granite/nehbandan.html">نهبندان</a></div>
+                    <div class="stone-name"><a href="granite/nehbandan.html">نهبندان</a></div>
                     <div class="price-range">قیمت: ۱,۵۰۰,۰۰۰ - ۲,۲۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #2c3e50;"></div>
@@ -109,7 +110,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name"> <a href="/html/granite/ntanz.html">نطنز</a></div>
+                    <div class="stone-name"> <a href="granite/ntanz.html">نطنز</a></div>
                     <div class="price-range">قیمت: ۱,۲۰۰,۰۰۰ - ۱,۸۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #7f8c8d;"></div>
@@ -119,7 +120,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name">  <a href="/html/granite/morvaridM.html"> مروارید مشهد</a></div>
+                    <div class="stone-name">  <a href="granite/morvaridM.html"> مروارید مشهد</a></div>
                     <div class="price-range">قیمت: ۱,۴۰۰,۰۰۰ - ۲,۰۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #ecf0f1;"></div>
@@ -140,7 +141,7 @@
             
             <div class="stone-list">
                 <div class="stone-item">
-                    <div class="stone-name"> <a href="/html/marmarit/abadeh.html">آباده</a></div>
+                    <div class="stone-name"> <a href="marmarit/abadeh.html">آباده</a></div>
                     <div class="price-range">قیمت: ۱,۰۰۰,۰۰۰ - ۱,۶۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #ecf0f1;"></div>
@@ -150,7 +151,7 @@
                 </div>
                 
                 <div class="stone-item">
-                    <div class="stone-name"> <a href="/html/marmarit/Kerman.html">کرمان</a></div>
+                    <div class="stone-name"> <a href="marmarit/Kerman.html">کرمان</a></div>
                     <div class="price-range">قیمت: ۱,۱۰۰,۰۰۰ - ۱,۷۰۰,۰۰۰ تومان</div>
                     <div class="color-icons">
                         <div class="color-icon" style="background-color: #d35400;"></div>
@@ -166,25 +167,25 @@
         </div>
     </div>
 
-    <script>
-        function showCategory(category) {
-            // مخفی کردن همه بخش‌ها
-            document.querySelectorAll('.category-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // غیرفعال کردن همه دکمه‌ها
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // نمایش بخش انتخاب شده
-            document.getElementById(category).classList.add('active');
-            
-            // فعال کردن دکمه انتخاب شده
-            event.target.classList.add('active');
-        }
-    </script>
+   <script>
+    function showCategory(category, event) {
+        // مخفی کردن همه بخش‌ها
+        document.querySelectorAll('.category-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // غیرفعال کردن همه دکمه‌ها
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // نمایش بخش انتخاب شده
+        document.getElementById(category).classList.add('active');
+        
+        // فعال کردن دکمه انتخاب شده
+        event.target.classList.add('active');
+    }
+</script>
 
 
  <script src="/js/script.js"></script>

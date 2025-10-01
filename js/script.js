@@ -374,3 +374,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+  function showCategory(category) {
+            // مخفی کردن همه بخش‌ها
+            document.querySelectorAll('.category-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // غیرفعال کردن همه دکمه‌ها
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // نمایش بخش انتخاب شده
+            document.getElementById(category).classList.add('active');
+            
+            // فعال کردن دکمه انتخاب شده
+            Event.target.classList.add('active');
+        }
